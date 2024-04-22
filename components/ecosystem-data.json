@@ -1,0 +1,68 @@
+{
+  "studios": [
+    {
+      "name": "Lattice",
+      "url": "https://lattice.xyz/",
+      "img": "/eco/lattice_square.jpeg"
+    },
+    {
+      "name": "Moving Castles",
+      "url": "https://movingcastles.world/",
+      "img": "/eco/movingcastle_square.png"
+    },
+    {
+      "name": "BibliothecaDAO",
+      "url": "https://bibliothecadao.xyz/",
+      "img": "/eco/bibliothecadao_square.jpeg"
+    },
+    {
+      "name": "Playmint",
+      "url": "https://playmint.com/",
+      "img": "/eco/playmint_square.jpeg"
+    },
+    {
+      "name": "Small Brain Games",
+      "url": "https;??",
+      "img": "/eco/smallbrain_square.jpeg"
+    },
+    {
+      "name": "Minter World",
+      "url": "https://mintersworld.com/",
+      "img": "/eco/minterworld_square.jpeg"
+    },
+    {
+      "name": "Proof of Play",
+      "url": "https://www.proofofplay.com/",
+      "img": "/eco/proofofplay_square.png"
+    }
+  ],
+  "tech": [
+    {
+      "name": "MUD",
+      "url": "https://mud.dev",
+      "img": "/eco/mud_square.jpeg"
+    },
+    {
+      "name": "Dojo",
+      "url": "https://dojoengine.com",
+      "img": "/eco/dojo_square.png"
+    }
+  ],
+  "guilds": [
+    {
+      "name": "World Explorers",
+      "url": "https://twitter.com/awexplorers",
+      "img": "/eco/worldexplores_square.jpeg"
+    },
+    {
+      "name": "WASD",
+      "url": "https://bento.me/wasd",
+      "img": "/eco/wasd_square.jpeg"
+    },
+    {
+      "name": "Funcraft Guild",
+      "url": "https://twitter.com/Funcraftguild",
+      "img": "/eco/funcraftguild_square.jpeg"
+    }
+  ]
+}
