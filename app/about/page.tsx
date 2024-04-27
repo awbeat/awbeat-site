@@ -18,7 +18,7 @@ export default function Home() {
 
           <h2 className="text-lg">Learn More</h2>
           <ul>
-            <a href="#">
+            <a href="https://aw.network/">
               - Autonomous network
             </a>
           </ul>
