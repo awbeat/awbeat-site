@@ -3,11 +3,11 @@ import React from "react";
 function Icon({data}: {data: any}) {
 
   const colors = {
-    0: "#ff0000",
-    1: '#ff7f00',
-    2: '#ffff00',
-    3: '#BFFF00',
-    4: '#00ff00',
+    0: "#dc2626",
+    1: '#fca5a5',
+    2: '#fafafa',
+    3: '#93c5fd',
+    4: '#2563eb',
   }
 
   return (

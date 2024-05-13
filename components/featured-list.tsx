@@ -12,7 +12,7 @@ export function FeaturedList({ data }: { data: any }) {
       <div className="flex w-max space-x-4 p-4 pl-0">
         {data.map((obj: any) => (
           <figure key={obj.name} className="shrink-0">
-            <div className="overflow-hidden rounded-none">
+            <div className="overflow-hidden ">
               <Link href={`${obj.url}`} target="_blank">
                 <Image
                   src={obj.img}

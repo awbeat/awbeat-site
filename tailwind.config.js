@@ -21,13 +21,13 @@ module.exports = {
         mono: ['var(--font-audiowide)'],
       },
       colors: {
-        border: "#000", //hsl(var(--border))",
+        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#23252a", // "#0F0B0C", //hsl(var(--background))",
+        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#fda238", //"hsl(var(--primary))",
+          DEFAULT:  "hsl(var(--primary))", //"#fda238",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -40,7 +40,7 @@ module.exports = {
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "#c9bebe", //hsl(var(--muted-foreground))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -51,8 +51,8 @@ module.exports = {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "#0F0B0C", //"hsl(var(--card))",
-          foreground:  "#fda238", //"hsl(var(--card-foreground))",
+          DEFAULT: "hsl(var(--card))",
+          foreground:  "hsl(var(--card-foreground))", // "#fda238",
         },
       },
       borderRadius: {

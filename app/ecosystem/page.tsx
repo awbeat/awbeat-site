@@ -11,11 +11,12 @@ import {
 } from "@/components/ui/card"
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-black via-background to-background">
+    <div className="">
     <main className="container ">
-      <div className="mt-20 text-center">
+      <div className="text-center">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          AW Ecosystem
+          Autonomous Worlds
+          <br/>Ecosystem
         </h1>
       </div>
 

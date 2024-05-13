@@ -7,10 +7,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { settings } from "@/config/settings"
 
 import { GoogleAnalytics } from '@next/third-parties/google'
-
-const inter = Play({
+import { alphaLyraeMedium } from './fonts';
+const inter = Inter({
   subsets: ["latin"],
-  weight: "400"
+  weight: ["400", "500", "600", "700", "800"]
 })
 
 
@@ -72,7 +72,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} flex min-h-screen flex-col bg-background text-primary`}
+        className={`${inter.className} flex min-h-screen flex-col bg-background `}
       >
         {settings.themeToggleEnabled ? (
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

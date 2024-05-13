@@ -8,13 +8,8 @@ import { navLinks } from "@/lib/links"
 import { settings } from "@/config/settings"
 import { Audiowide } from "next/font/google"
 import { Button } from "@/components/ui/button"
-
-
-
-const audiowide = Audiowide({
-  weight: "400",
-  subsets:['latin']
-});
+import { alphaLyraeMedium } from "@/app/fonts";
+import Image from "next/image";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false)
@@ -34,18 +29,26 @@ export default function Navbar() {
   }, [navbar])
 
   return (
-    <header className="select-none bg-card">
-      <nav className="container ml-autopx-4 md:flex md:items-center md:px-8 mx-auto">
+    <header className="select-none">
+      <nav className="container md:flex md:items-center px-8 mx-auto py-12">
         <div>
-          <div className="flex items-center justify-between py-3 md:block md:py-5">
+          <div className="flex items-center justify-between block py-5">
             <Link href="/" onClick={handleClick}>
-              <h1 className={`${audiowide.className} text-2xl duration-200 lg:hover:scale-[1.10]`}>
-                {siteConfig.name}
+              <h1 className={`${alphaLyraeMedium.className} text-2xl duration-200`}>
+                {/* {siteConfig.name} */}
+
+                <Image
+        src="/awbeat_logo.svg"
+        className=""
+        width={100}
+        height={20}
+        alt="Card image"
+      />
               </h1>
             </Link>
             <div className="flex gap-1 md:hidden">
               <button
-                className="rounded-md p-2 text-primary outline-none focus:border focus:border-primary"
+                className="rounded-md p-2 outline-none focus:border focus:border-primary"
                 aria-label="Hamburger Menu"
                 onClick={() => setNavbar(!navbar)}
               >
@@ -85,16 +88,16 @@ export default function Navbar() {
         </div>
         <div className="ml-auto">
           <div
-            className={`absolute left-0 right-0 z-10 m-auto justify-self-end rounded-none border p-4 md:static md:mt-0 md:block md:border-none md:p-0 bg-card ${
+            className={`absolute left-0 right-0 z-10 m-auto justify-self-end md:static md:mt-0 md:block md:border-none md:p-0  w-full ${
               navbar ? "block" : "hidden"
             }`}
-            style={{ width: "100%"}}
+            style={{}}
           >
-            <ul className="flex flex-col items-center space-y-4 text-primary md:flex-row md:space-x-6 md:space-y-0">
+            <ul className="flex flex-col items-center space-y-4 md:flex-row md:space-x-6 md:space-y-0 ">
               {navLinks.map((link) => (
                 <li key={link.route}>
                   <Link
-                    className="hover:underline uppercase font-semibold"
+                    className="hover:underline"
                     href={link.path}
                     onClick={handleClick}
                   >

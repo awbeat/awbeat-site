@@ -6,7 +6,7 @@ export default function Footer() {
   return (
 
 
-    <footer className="container">
+    <footer className="container m-8 text-center mx-auto">
     <div className="mx-auto w-full max-w-screen-xl  pb-6 lg:pb-8">
         <div className="md:flex md:justify-between">
 
@@ -14,7 +14,7 @@ export default function Footer() {
 
           </div>
       </div>
-      <hr className="my-6 sm:mx-auto lg:my-8" />
+      {/* <hr className="my-6 sm:mx-auto lg:my-8" /> */}
       <div className=" text-center">
           <span className="text-m  text-center">Made with ❤ by a bunch of nerds</span>
           <div className="flex mt-4 justify-center gap-4">

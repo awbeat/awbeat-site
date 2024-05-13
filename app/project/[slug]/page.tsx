@@ -18,35 +18,24 @@ export default function ProjectPage({ params }: { params: any }) {
   const obj = data.filter((item: { slug: any }) => item.slug === params.slug)[0]
   console.log(obj)
   return (
-    <main className="bg-gradient-to-b from-black via-background to-background">
-      <div className="relative h-60">
+    <main className=" container">
+      <div className="relative h-[400px]">
         <Image
           src={obj.image_banner}
           alt="cover-image"
           fill={true}
           style={{ objectFit: "cover" }}
-          className="border-b-4 border-solid"
+          className="border-4 border-solid rounded-xl overflow-hidden"
         />
-        {/* <img
-            src={obj.image_banner}
-            alt="cover-image"
-            className="absolute left-0 top-0 z-0 h-60 w-full  border-4 border-t-0 border-solid"
-          /> */}
       </div>
       <div className="container">
-        {/* <div className="mt-20 text-center">
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            {params.slug}
-          </h1>
-        </div> */}
-
         <section className="relative pb-24">
           <div className="mx-auto -mt-20 w-full max-w-7xl px-6 md:px-0">
             <div className="relative z-10 mb-5 flex items-center justify-center sm:justify-start">
               <img
                 src={obj.image_square}
                 alt="user-avatar-image"
-                className=" h-[200px] w-[200px] border-4 border-solid"
+                className=" h-[160px] w-[160px] border-4 border-solid  rounded-xl overflow-hidden"
               />
             </div>
             <div className="mb-5 flex flex-col items-center justify-center max-sm:gap-5 sm:flex-row sm:justify-between">
@@ -64,18 +53,18 @@ export default function ProjectPage({ params }: { params: any }) {
             <div className="flex items-center gap-4 max-sm:flex-wrap max-sm:justify-center">
               <div className="flex gap-4">
                 <Link href={obj.website}>
-                  <button className="mb-4 flex w-[150px] items-center rounded-full rounded-none bg-primary px-5 py-3.5 text-black shadow-sm shadow-transparent transition-all duration-500">
-                    <span className="px-2 text-base font-semibold leading-7">
-                      Go to Site -{`>`}
-                    </span>
+                  <button className="mb-4  items-center rounded-xl bg-primary px-3 py-2 text-black shadow-sm shadow-transparent transition-all duration-500">
+                    {/* <span className="px-2 text-base font-semibold leading-7"> */}
+                    Website
+                    {/* </span> */}
                   </button>
                 </Link>
 
                 <Link href={obj.website}>
-                  <button className="flex w-[150px] items-center rounded-full rounded-none bg-primary px-5 py-3.5 text-black shadow-sm shadow-transparent transition-all duration-500">
-                    <span className="px-2 text-base font-semibold leading-7">
-                      Github -{`>`}
-                    </span>
+                  <button className=" items-center rounded-xl bg-primary px-3 py-2 text-black shadow-sm shadow-transparent transition-all duration-500">
+                    {/* <span className="px-2 text-base font-semibold leading-7"> */}
+                    Github
+                    {/* </span> */}
                   </button>
                 </Link>
               </div>
@@ -124,47 +113,57 @@ export default function ProjectPage({ params }: { params: any }) {
                       </CardContent>
                     </Card>
                   </div> */}
-                  <Card className=" relative rounded-none p-4">
-                    <div className="mb-8">
-                      <ul className="grid gap-3">
-                        <li className="flex items-center justify-between">
-                          <span className="text-muted-foreground">Network</span>
-                          <span>{obj.network}</span>
-                        </li>
-                        <li className="flex items-center justify-between">
-                          <span className="text-muted-foreground">Genres</span>
-                          <span>{obj.genre}</span>
-                        </li>
-
-                        <li className="flex items-center justify-between">
-                          <span className="text-muted-foreground">
-                            Launch Stage
-                          </span>
-                          <span>{obj.devstatus}</span>
-                        </li>
-                        <li className="flex items-center justify-between">
-                          <span className="text-muted-foreground">
-                            Publisher
-                          </span>
-                          <span>{obj.publisher || "n/a"}</span>
-                        </li>
-                        <li className="flex items-center justify-between">
-                          <span className="text-muted-foreground">License</span>
-                          <span>{obj.licence || "n/a"}</span>
-                        </li>
-                        <li className="flex items-center justify-between">
-                          <span className="text-muted-foreground">
-                            Framework
-                          </span>
-                          <span>{obj.framework}</span>
-                        </li>
-                        <li className="flex items-center justify-between">
-                          <span className="text-muted-foreground">
-                            Gas Subsidy
-                          </span>
-                          <span>{obj["gas-subsidy"]}</span>
-                        </li>
-                      </ul>
+                  <Card className=" relative p-4">
+                    <div className="flex w-full">
+                      <div className="w-1/2 p-8 py-0">
+                        <Piechart data={obj.pie} />
+                      </div>
+                      <div className="w-1/2 p-8">
+                        <div className="grid gap-3">
+                          <div className="font-semibold">Ratings</div>
+                          <ul className="grid gap-3">
+                            <li className="flex items-center justify-between">
+                              <span className="text-muted-foreground">
+                                Ruggability
+                              </span>
+                              <span>{obj.pie[0]}</span>
+                            </li>
+                            <li className="flex items-center justify-between">
+                              <span className="text-muted-foreground">
+                                Logic
+                              </span>
+                              <span>{obj.pie[1]}</span>
+                            </li>
+                          </ul>
+                          {/* <Separator className="my-2" /> */}
+                          <ul className="grid gap-3">
+                            <li className="flex items-center justify-between">
+                              <span className="text-muted-foreground">
+                                Extensibility
+                              </span>
+                              <span>{obj.pie[2]}</span>
+                            </li>
+                            <li className="flex items-center justify-between">
+                              <span className="text-muted-foreground">
+                                Client
+                              </span>
+                              <span>{obj.pie[3]}</span>
+                            </li>
+                            <li className="flex items-center justify-between">
+                              <span className="text-muted-foreground">
+                                Playability
+                              </span>
+                              <span>{obj.pie[4]}</span>
+                            </li>
+                            <li className="flex items-center justify-between font-semibold">
+                              <span className="text-muted-foreground">
+                                Deployment
+                              </span>
+                              <span>{obj.pie[5]}</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                     <div className="w-full">
                       <GameGallery data={obj.image_reel} />
@@ -173,50 +172,54 @@ export default function ProjectPage({ params }: { params: any }) {
                 </div>
                 <div>
                   <Card
-                    className="overflow-hidden rounded-none"
+                    className="overflow-hidden"
                     x-chunk="dashboard-05-chunk-4"
                   >
                     <CardContent className=" text-sm">
-                      <Piechart data={obj.pie} />
-                      <div className="grid gap-3">
-                        <div className="font-semibold">Ratings</div>
+                      <div className="my-8">
                         <ul className="grid gap-3">
                           <li className="flex items-center justify-between">
                             <span className="text-muted-foreground">
-                              Ruggability
+                              Network
                             </span>
-                            <span>{obj.pie[0]}</span>
-                          </li>
-                          <li className="flex items-center justify-between">
-                            <span className="text-muted-foreground">Logic</span>
-                            <span>{obj.pie[1]}</span>
-                          </li>
-                        </ul>
-                        {/* <Separator className="my-2" /> */}
-                        <ul className="grid gap-3">
-                          <li className="flex items-center justify-between">
-                            <span className="text-muted-foreground">
-                              Extensibility
-                            </span>
-                            <span>{obj.pie[2]}</span>
+                            <span>{obj.network}</span>
                           </li>
                           <li className="flex items-center justify-between">
                             <span className="text-muted-foreground">
-                              Client
+                              Genres
                             </span>
-                            <span>{obj.pie[3]}</span>
+                            <span>{obj.genre}</span>
+                          </li>
+
+                          <li className="flex items-center justify-between">
+                            <span className="text-muted-foreground">
+                              Launch Stage
+                            </span>
+                            <span>{obj.devstatus}</span>
                           </li>
                           <li className="flex items-center justify-between">
                             <span className="text-muted-foreground">
-                              Playability
+                              Publisher
                             </span>
-                            <span>{obj.pie[4]}</span>
+                            <span>{obj.publisher || "n/a"}</span>
                           </li>
-                          <li className="flex items-center justify-between font-semibold">
+                          <li className="flex items-center justify-between">
                             <span className="text-muted-foreground">
-                              Deployment
+                              License
                             </span>
-                            <span>{obj.pie[5]}</span>
+                            <span>{obj.licence || "n/a"}</span>
+                          </li>
+                          <li className="flex items-center justify-between">
+                            <span className="text-muted-foreground">
+                              Framework
+                            </span>
+                            <span>{obj.framework}</span>
+                          </li>
+                          <li className="flex items-center justify-between">
+                            <span className="text-muted-foreground">
+                              Gas Subsidy
+                            </span>
+                            <span>{obj["gas-subsidy"]}</span>
                           </li>
                         </ul>
                       </div>
