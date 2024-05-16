@@ -23,9 +23,6 @@ import PieChart from "@/components/piechart"
 export default function Component() {
   return (
     <Card className="">
-      {/* <CardHeader className="px-6">
-        <CardTitle>Games</CardTitle>
-      </CardHeader> */}
       <CardContent className="px-0">
         <Table>
           <TableHeader>
