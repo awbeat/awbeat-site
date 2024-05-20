@@ -77,43 +77,8 @@ export default function ProjectPage({ params }: { params: any }) {
             <div className="flex flex-col sm:gap-4 sm:py-4">
               <main className="grid flex-1 items-start gap-4 p-4 sm:px-0 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
                 <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2">
-                  {/* <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-                    <Card
-                      className="sm:col-span-2"
-                      x-chunk="dashboard-05-chunk-0"
-                    >
-                      <CardHeader className="pb-3">
-                        <CardTitle>Your Orders</CardTitle>
-                        <CardDescription className="text-balance max-w-lg leading-relaxed">
-                          Introducing Our Dynamic Orders Dashboard for Seamless
-                          Management and Insightful Analysis.
-                        </CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card x-chunk="dashboard-05-chunk-1">
-                      <CardHeader className="pb-2">
-                        <CardDescription>This Week</CardDescription>
-                        <CardTitle className="text-4xl">$1,329</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="text-xs text-muted-foreground">
-                          +25% from last week
-                        </div>
-                      </CardContent>
-                    </Card>
-                    <Card x-chunk="dashboard-05-chunk-2">
-                      <CardHeader className="pb-2">
-                        <CardDescription>This Month</CardDescription>
-                        <CardTitle className="text-4xl">$5,329</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="text-xs text-muted-foreground">
-                          +10% from last month
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div> */}
-                  <Card className=" relative p-4">
+
+                  <Card className=" relative">
                     <div className="flex w-full">
                       <div className="w-1/2 p-8 py-0">
                         <Piechart data={obj.pie} />
@@ -175,7 +140,7 @@ export default function ProjectPage({ params }: { params: any }) {
                     className="overflow-hidden"
                     x-chunk="dashboard-05-chunk-4"
                   >
-                    <CardContent className=" text-sm">
+                    <CardContent className=" ">
                       <div className="my-8">
                         <ul className="grid gap-3">
                           <li className="flex items-center justify-between">
